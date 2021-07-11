@@ -68,8 +68,32 @@ class Note extends FlxSprite
 			flipY = true;
 
 		this.noteData = noteData;
-
+		
+		if (electric == true)
+			{
+			   mustPress = electric;
+			   wasGoodHit = !electric;
+			}
+			else
+			{
+			   mustPress = !electric;
+			   wasGoodHit = electric;
+			}
+	
 		var daStage:String = PlayState.curStage;
+		if (electric)
+			{
+				frames = Paths.getSparrowAtlas('NOTE_electric');
+	
+				animation.addByPrefix('greenScroll', 'green electric');
+				animation.addByPrefix('redScroll', 'red electric');
+				animation.addByPrefix('blueScroll', 'blue electric');
+				animation.addByPrefix('purpleScroll', 'purple electric');
+	
+					setGraphicSize(Std.int(width * 0.7));
+					updateHitbox();
+					antialiasing = true;
+			}
 
 		//defaults if no noteStyle was found in chart
 		var noteTypeCheck:String = 'normal';
@@ -105,57 +129,77 @@ class Note extends FlxSprite
 
 				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
 				updateHitbox();
-			default:
-				frames = Paths.getSparrowAtlas('NOTE_assets');
+			case 'electric':
+				frames = Paths.getSparrowAtlas('NOTE_electric');
 
-				animation.addByPrefix('greenScroll', 'green0');
-				animation.addByPrefix('redScroll', 'red0');
-				animation.addByPrefix('blueScroll', 'blue0');
-				animation.addByPrefix('purpleScroll', 'purple0');
+				animation.addByPrefix('greenScroll', 'green electric');
+				animation.addByPrefix('redScroll', 'red electric');
+				animation.addByPrefix('blueScroll', 'blue electric');
+				animation.addByPrefix('purpleScroll', 'purple electric');
 
-				animation.addByPrefix('purpleholdend', 'pruple end hold');
+				animation.addByPrefix('purpleholdend', 'green hold end');
 				animation.addByPrefix('greenholdend', 'green hold end');
-				animation.addByPrefix('redholdend', 'red hold end');
-				animation.addByPrefix('blueholdend', 'blue hold end');
+				animation.addByPrefix('redholdend', 'green hold end');
+				animation.addByPrefix('blueholdend', 'green hold end');
 
-				animation.addByPrefix('purplehold', 'purple hold piece');
+				animation.addByPrefix('purplehold', 'green hold piece');
 				animation.addByPrefix('greenhold', 'green hold piece');
-				animation.addByPrefix('redhold', 'red hold piece');
-				animation.addByPrefix('bluehold', 'blue hold piece');
+				animation.addByPrefix('redhold', 'green hold piece');
+				animation.addByPrefix('bluehold', 'green hold piece');
 
 				setGraphicSize(Std.int(width * 0.7));
 				updateHitbox();
 				antialiasing = true;
-			if(electric){
-					if (daStage == 'stormtower')
+			default:
+				if (electric == true)
 					{
-						frames = Paths.getSparrowAtlas('NOTE_electric');
-						animation.addByPrefix('greenScroll', 'Green Arrow');
-						animation.addByPrefix('redScroll', 'Red Arrow');
-						animation.addByPrefix('blueScroll', 'Blue Arrow');
-						animation.addByPrefix('purpleScroll', 'Purple Arrow');
-						x -= 165;
+					   frames = Paths.getSparrowAtlas('NOTE_electric');
+	
+					   animation.addByPrefix('greenScroll', 'green electric');
+					   animation.addByPrefix('redScroll', 'red electric');
+					   animation.addByPrefix('blueScroll', 'blue electric');
+					   animation.addByPrefix('purpleScroll', 'purple electric');
+	
+					   animation.addByPrefix('purpleholdend', 'pruple end hold');
+					   animation.addByPrefix('greenholdend', 'green hold end');
+					   animation.addByPrefix('redholdend', 'red hold end');
+					   animation.addByPrefix('blueholdend', 'blue hold end');
+	
+					   animation.addByPrefix('purplehold', 'purple hold piece');
+					   animation.addByPrefix('greenhold', 'green hold piece');
+					   animation.addByPrefix('redhold', 'red hold piece');
+					   animation.addByPrefix('bluehold', 'blue hold piece');
+	
+					   setGraphicSize(Std.int(width * 0.7));
+					   updateHitbox();
+					   antialiasing = true;
 					}
-					else
+					else if (electric == false)
 					{
-						frames = Paths.getSparrowAtlas('NOTE_electric');
-						if(!FlxG.save.data.downscroll){
-							animation.addByPrefix('blueScroll', 'blue electric');
-							animation.addByPrefix('greenScroll', 'green electric');
-						}
-						else{
-							animation.addByPrefix('greenScroll', 'blue electric');
-							animation.addByPrefix('blueScroll', 'green electric');
-						}
-						animation.addByPrefix('redScroll', 'red electric');
-						animation.addByPrefix('purpleScroll', 'purple electric');
-
-						if(FlxG.save.data.downscroll)
-							flipY = true;
-
-						x -= 50;
+					   frames = Paths.getSparrowAtlas('NOTE_assets');
+	
+					   animation.addByPrefix('greenScroll', 'green0');
+					   animation.addByPrefix('redScroll', 'red0');
+					   animation.addByPrefix('blueScroll', 'blue0');
+					   animation.addByPrefix('purpleScroll', 'purple0');
+	
+					   animation.addByPrefix('purpleholdend', 'pruple end hold');
+					   animation.addByPrefix('greenholdend', 'green hold end');
+					   animation.addByPrefix('redholdend', 'red hold end');
+					   animation.addByPrefix('blueholdend', 'blue hold end');
+	
+					   animation.addByPrefix('purplehold', 'purple hold piece');
+					   animation.addByPrefix('greenhold', 'green hold piece');
+					   animation.addByPrefix('redhold', 'red hold piece');
+					   animation.addByPrefix('bluehold', 'blue hold piece');
+	
+					   setGraphicSize(Std.int(width * 0.7));
+					   updateHitbox();
+					   antialiasing = true;
 					}
 				}
+			 
+		
 
 		if (electric)
 		setGraphicSize(Std.int(width * 0.86));
@@ -234,7 +278,7 @@ class Note extends FlxSprite
 			}
 		}
 	}
-}
+
 
 	override function update(elapsed:Float)
 	{

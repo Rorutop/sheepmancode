@@ -3523,6 +3523,10 @@ class PlayState extends MusicBeatState
 
 				if (!note.wasGoodHit)
 				{
+					if (note.electric)
+					{
+						HealthDrain();
+					}
 					if (!note.isSustainNote)
 					{
 						popUpScore(note);
@@ -3531,7 +3535,8 @@ class PlayState extends MusicBeatState
 					else
 						totalNotesHit += 1;
 	
-
+					if (!note.electric)
+					{
 					switch (note.noteData)
 					{
 						case 2:
@@ -3542,6 +3547,7 @@ class PlayState extends MusicBeatState
 							boyfriend.playAnim('singDOWN', true);
 						case 0:
 							boyfriend.playAnim('singLEFT', true);
+					}
 					}
 		
 					#if windows
@@ -3603,6 +3609,19 @@ class PlayState extends MusicBeatState
 				resetFastCar();
 			});
 		}
+	}
+	function HealthDrain():Void
+	{
+		boyfriend.playAnim("hit", true);
+		FlxG.camera.zoom -= 0.02;
+		new FlxTimer().start(0.3, function(tmr:FlxTimer)
+		{
+			boyfriend.playAnim("idle", true);
+		});
+		new FlxTimer().start(0.01, function(tmr:FlxTimer)
+		{
+			health -= 0.005;
+		}, 300);
 	}
 
 	var trainMoving:Bool = false;
