@@ -2540,19 +2540,32 @@ class PlayState extends MusicBeatState
 										totalNotesHit += 1;
 									else
 									{
+										if (daNote.noteType == 2)
+											{
+												health -= 10;
+											}
+										if (daNote.noteType == 1 || daNote.noteType == 0)
+											{
 										health -= 0.075;
 										vocals.volume = 0;
 										if (theFunne)
 											noteMiss(daNote.noteData, daNote);
+									    }
 									}
 								}
 								else
 								{
+									if (daNote.noteType == 2)
+										{
+											health -= 10;
+										}
+									if (daNote.noteType == 1 || daNote.noteType == 0)
+										{
 									health -= 0.075;
 									vocals.volume = 0;
 									if (theFunne)
 										noteMiss(daNote.noteData, daNote);
-								}
+								} }
 							}
 		
 							daNote.visible = false;
@@ -2780,66 +2793,38 @@ class PlayState extends MusicBeatState
 
 			switch(daRating)
 			{
-					case 'shit':
-						if (daNote.noteType == 2)
-							{
-								health -= -10;
-							}
-						if (daNote.noteType == 1 || daNote.noteType == 0)
-							{
-								score = -300;
-								combo = 0;
-								misses++;
-								health -= 0.2;
-								ss = false;
-								shits++;
-								if (FlxG.save.data.accuracyMod == 0)
-									totalNotesHit += 0.25;
-							}
-					case 'bad':
-						if (daNote.noteType == 2)
-							{
-								health -= -10;
-							}
-						if (daNote.noteType == 1 || daNote.noteType == 0)
-							{
-								daRating = 'bad';
-								score = 0;
-								health -= 0.06;
-								ss = false;
-								bads++;
-								if (FlxG.save.data.accuracyMod == 0)
-									totalNotesHit += 0.50;
-							}
-					case 'good':
-						if (daNote.noteType == 2)
-							{
-								health -= -10;
-							}
-						if (daNote.noteType == 1 || daNote.noteType == 0)
-							{
-								daRating = 'good';
-								score = 200;
-								ss = false;
-								goods++;
-								if (health < 2)
-									health += 0.04;
-								if (FlxG.save.data.accuracyMod == 0)
-									totalNotesHit += 0.75;
-							}
-					case 'sick':
-						if (daNote.noteType == 2)
-							{
-								health -= -10;
-							}
-						if (daNote.noteType == 1 || daNote.noteType == 0)
-							{
-								if (health < 2)
-									health += 0.1;
-								if (FlxG.save.data.accuracyMod == 0)
-									totalNotesHit += 1;
-								sicks++;	
-							}					
+				case 'shit':
+					score = -300;
+					combo = 0;
+					misses++;
+					health -= 0.2;
+					ss = false;
+					shits++;
+					if (FlxG.save.data.accuracyMod == 0)
+						totalNotesHit += 0.25;
+				case 'bad':
+					daRating = 'bad';
+					score = 0;
+					health -= 0.06;
+					ss = false;
+					bads++;
+					if (FlxG.save.data.accuracyMod == 0)
+						totalNotesHit += 0.50;
+				case 'good':
+					daRating = 'good';
+					score = 200;
+					ss = false;
+					goods++;
+					if (health < 2)
+						health += 0.04;
+					if (FlxG.save.data.accuracyMod == 0)
+						totalNotesHit += 0.75;
+				case 'sick':
+					if (health < 2)
+						health += 0.1;
+					if (FlxG.save.data.accuracyMod == 0)
+						totalNotesHit += 1;
+					sicks++;
 			}
 			//shout out to catbrother everything yt for helping me to do this
 
