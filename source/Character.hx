@@ -96,13 +96,15 @@ class Character extends FlxSprite
 			case 'gf-car':
 				tex = Paths.getSparrowAtlas('characters/gfCar');
 				frames = tex;
-				animation.addByIndices('singUP', 'GF Dancing Beat Hair blowing CAR', [0], "", 24, false);
-				animation.addByIndices('danceLeft', 'GF Dancing Beat Hair blowing CAR', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-				animation.addByIndices('danceRight', 'GF Dancing Beat Hair blowing CAR', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24,
+				animation.addByIndices('singUP', 'GF Dancing Beat Hair blowing', [0], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat Hair blowing', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat Hair blowing', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24,
 					false);
+				animation.addByPrefix('scared', 'GF FEAR CAR', 16);
 
 				addOffset('danceLeft', 0);
 				addOffset('danceRight', 0);
+				addOffset('scared', -2, -17);
 
 				playAnim('danceRight');
 
@@ -348,6 +350,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
 				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('scared', 'BF idle shaking', 16);
+				animation.addByPrefix('hey', 'BF HEY', 16, false);
 
 				addOffset('idle', -5);
 				addOffset("singUP", -29, 27);
@@ -358,6 +362,8 @@ class Character extends FlxSprite
 				addOffset("singRIGHTmiss", -30, 21);
 				addOffset("singLEFTmiss", 12, 24);
 				addOffset("singDOWNmiss", -11, -19);
+				addOffset('scared', -4);
+				addOffset("hey", 7, 4);
 				playAnim('idle');
 
 				flipX = true;
@@ -500,20 +506,36 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 			case 'sheepman':
-				// DAD ANIMATION LOADING CODE
-				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST', 'shared');
+				tex = Paths.getSparrowAtlas('characters/sheepman', 'shared');
 				frames = tex;
-				animation.addByPrefix('idle', 'Dad idle dance', 24);
-				animation.addByPrefix('singUP', 'Dad Sing Note UP', 24);
-				animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24);
-				animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24);
-				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
+				animation.addByPrefix('idle', 'sheepIDLE', 24);
+				animation.addByPrefix('singUP', 'sheepUP', 24);
+				animation.addByPrefix('singRIGHT', 'sheepRIGHT', 24);
+				animation.addByPrefix('singDOWN', 'sheepDOWN', 24);
+				animation.addByPrefix('singLEFT', 'sheepLEFT', 24);
 
-				addOffset('idle');
-				addOffset("singUP", -6, 50);
-				addOffset("singRIGHT", 0, 27);
-				addOffset("singLEFT", -10, 10);
-				addOffset("singDOWN", 0, -30);
+				addOffset('idle', 115, 30);
+				addOffset("singUP", 71, -5);
+				addOffset("singRIGHT", 8, -17);
+				addOffset("singLEFT", -48, 117);
+				addOffset("singDOWN", 14, 77);
+
+				playAnim('idle');
+
+			case 'purpleshep':
+				tex = Paths.getSparrowAtlas('characters/purpleshep', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Purpleshep Idle', 30, false);
+				animation.addByPrefix('singUP', 'PURPLESHEP UP POSE', 20, false);
+				animation.addByPrefix('singRIGHT', 'PURPLESHEP RIGHT POSE', 14, false);
+				animation.addByPrefix('singDOWN', 'PURPLESHEP DOWN POSE', 18, false);
+				animation.addByPrefix('singLEFT', 'PURPLESHEP LEFT POSE', 22, false);
+
+				addOffset("idle", 50, -33);
+				addOffset("singUP", 43, 344);
+				addOffset("singRIGHT", -10, -24);
+				addOffset("singLEFT", -60, -143);
+				addOffset("singDOWN", 10, -80);
 
 				playAnim('idle');
 		}

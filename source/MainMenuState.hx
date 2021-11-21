@@ -24,7 +24,6 @@ using StringTools;
 class MainMenuState extends MusicBeatState
 {
 	var curSelected:Int = 0;
-
 	var menuItems:FlxTypedGroup<FlxSprite>;
 
 	#if !switch
@@ -52,11 +51,16 @@ class MainMenuState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
-
+		FlxG.camera.zoom = 2;
+		new FlxTimer().start(0.001, function(tmr:FlxTimer)
+			{
+				FlxTween.tween(FlxG.camera, {zoom:1}, 1.2, {ease: FlxEase.cubeInOut});
+			}, 0);
 		if (!FlxG.sound.music.playing)
 		{
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 		}
+		
 
 		persistentUpdate = persistentDraw = true;
 
@@ -102,11 +106,14 @@ class MainMenuState extends MusicBeatState
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = true;
 			if (firstStart)
-				FlxTween.tween(menuItem,{y: 60 + (i * 160)},1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
-					{ 
-						finishedFunnyMove = true; 
-						changeItem();
-					}});
+				new FlxTimer().start(0.01, function(tmr:FlxTimer)
+					{
+						FlxTween.tween(menuItem,{y: 60 + (i * 160)},1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
+						{ 
+							finishedFunnyMove = true; 
+							changeItem();
+						}});
+					}, 0);
 			else
 				menuItem.y = 60 + (i * 160);
 		}
@@ -141,7 +148,7 @@ class MainMenuState extends MusicBeatState
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
-
+		
 		if (!selectedSomethin)
 		{
 			if (controls.UP_P)
@@ -163,12 +170,7 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'donate')
-				{
-					fancyOpenURL("https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game");
-				}
-				else
-				{
+
 					selectedSomethin = true;
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 					
@@ -205,7 +207,7 @@ class MainMenuState extends MusicBeatState
 							}
 						}
 					});
-				}
+				
 			}
 		}
 
@@ -230,6 +232,10 @@ class MainMenuState extends MusicBeatState
 				FlxG.switchState(new FreeplayState());
 
 				trace("Freeplay Menu Selected");
+			case 'donate':
+				FlxG.switchState(new SupportState());
+
+				trace("Donate Menu Selected");
 
 			case 'options':
 				FlxG.switchState(new OptionsMenu());

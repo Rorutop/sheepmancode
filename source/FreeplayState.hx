@@ -32,6 +32,14 @@ class FreeplayState extends MusicBeatState
 	var intendedScore:Int = 0;
 	var combo:String = '';
 
+	var checklist1:FlxSprite;
+	var checklist2:FlxSprite;
+	var checklist3:FlxSprite;
+
+	var modchartText:FlxText;
+	var cloudText:FlxText;
+	var copyrightText:FlxText;
+
 	private var grpSongs:FlxTypedGroup<Alphabet>;
 	private var curPlaying:Bool = false;
 
@@ -72,6 +80,8 @@ class FreeplayState extends MusicBeatState
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
 		add(bg);
+		
+
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
@@ -113,6 +123,10 @@ class FreeplayState extends MusicBeatState
 		add(comboText);
 
 		add(scoreText);
+		add(cloudText);
+		add(modchartText);
+		add(checklist1);
+		add(checklist2);
 
 		changeSelection();
 		changeDiff();

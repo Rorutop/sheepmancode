@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Background.png">
+	<!-- Created with Adobe Animate version 20.5.1.31044 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bg0000" x="0" y="3120" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0000" x="0" y="0" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0001" x="0" y="0" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0002" x="0" y="0" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0003" x="1822" y="0" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0004" x="1822" y="0" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0005" x="1822" y="0" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0006" x="3644" y="0" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0007" x="3644" y="0" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0008" x="3644" y="0" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0009" x="5466" y="0" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0010" x="5466" y="0" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0011" x="5466" y="0" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0012" x="0" y="1040" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0013" x="0" y="1040" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0014" x="0" y="1040" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0015" x="1822" y="1040" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0016" x="1822" y="1040" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0017" x="1822" y="1040" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0018" x="3644" y="1040" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0019" x="3644" y="1040" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0020" x="3644" y="1040" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0021" x="5466" y="1040" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0022" x="5466" y="1040" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0023" x="5466" y="1040" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0024" x="0" y="2080" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0025" x="0" y="2080" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0026" x="0" y="2080" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0027" x="1822" y="2080" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0028" x="1822" y="2080" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0029" x="1822" y="2080" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0030" x="3644" y="2080" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0031" x="3644" y="2080" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0032" x="3644" y="2080" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0033" x="5466" y="2080" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0034" x="5466" y="2080" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0035" x="5466" y="2080" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0036" x="0" y="3120" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0037" x="0" y="3120" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0038" x="0" y="3120" width="1822" height="1040"/>
+	<SubTexture name="bgFlash0039" x="0" y="3120" width="1822" height="1040"/>
+</TextureAtlas>

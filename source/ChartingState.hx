@@ -511,8 +511,14 @@ class ChartingState extends MusicBeatState
 			FlxG.sound.music.stop();
 			// vocals.stop();
 		}
-
-		FlxG.sound.playMusic(Paths.inst(daSong), 0.6);
+		if (_song.song.toLowerCase() == 'dark-sheep')
+		{
+			FlxG.sound.playMusic(Paths.inst(daSong), 1);
+		}
+		else
+		{
+			FlxG.sound.playMusic(Paths.inst(daSong), 0.6);
+		}
 
 		// WONT WORK FOR TUTORIAL OR TEST SONG!!! REDO LATER
 		vocals = new FlxSound().loadEmbedded(Paths.voices(daSong));

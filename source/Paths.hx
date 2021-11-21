@@ -112,7 +112,14 @@ class Paths
 				case 'dad-battle': songLowercase = 'dadbattle';
 				case 'philly-nice': songLowercase = 'philly';
 			}
+		if (song.toLowerCase() == 'dark-sheep' && Main.copyright)
+		{
+		return 'songs:assets/songs/${songLowercase}/Sheep.$SOUND_EXT';
+		}
+		else
+		{
 		return 'songs:assets/songs/${songLowercase}/Inst.$SOUND_EXT';
+		}
 	}
 
 	inline static public function image(key:String, ?library:String)

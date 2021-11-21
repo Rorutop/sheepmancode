@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="cloud.png">
+	<!-- Created with Adobe Animate version 20.5.1.31044 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cloudgif 1000" x="0" y="0" width="619" height="285" frameX="-49" frameY="-269" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1001" x="0" y="0" width="619" height="285" frameX="-49" frameY="-269" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1002" x="0" y="0" width="619" height="285" frameX="-49" frameY="-269" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1003" x="0" y="0" width="619" height="285" frameX="-49" frameY="-269" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1004" x="0" y="0" width="619" height="285" frameX="-49" frameY="-269" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1005" x="0" y="0" width="619" height="285" frameX="-49" frameY="-269" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1006" x="0" y="0" width="619" height="285" frameX="-49" frameY="-269" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1007" x="0" y="0" width="619" height="285" frameX="-49" frameY="-269" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1008" x="619" y="0" width="611" height="288" frameX="-58" frameY="-261" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1009" x="619" y="0" width="611" height="288" frameX="-58" frameY="-261" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1010" x="619" y="0" width="611" height="288" frameX="-58" frameY="-261" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1011" x="619" y="0" width="611" height="288" frameX="-58" frameY="-261" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1012" x="619" y="0" width="611" height="288" frameX="-58" frameY="-261" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1013" x="619" y="0" width="611" height="288" frameX="-58" frameY="-261" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1014" x="619" y="0" width="611" height="288" frameX="-58" frameY="-261" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1015" x="619" y="0" width="611" height="288" frameX="-58" frameY="-261" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 1016" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+
+	<SubTexture name="cloudgif 2000" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2001" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2002" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2003" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2004" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2005" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2006" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2007" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2008" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2009" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2010" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2011" x="1230" y="0" width="2150" height="547" frameX="0" frameY="-28" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2012" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2013" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2014" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2015" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2016" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2017" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2018" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2019" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2020" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2021" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2022" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2023" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2024" x="0" y="547" width="2206" height="593" frameX="-14" frameY="0" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2025" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2026" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2027" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2028" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2029" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2030" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2031" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2032" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2033" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2034" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2035" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2036" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+	<SubTexture name="cloudgif 2037" x="0" y="1140" width="2125" height="575" frameX="-19" frameY="-12" frameWidth="2220" frameHeight="593"/>
+</TextureAtlas>
