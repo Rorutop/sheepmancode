@@ -7,7 +7,6 @@ local waveside4 = false
 local invishud = false
 local camSide = false
 local camSideEnable = false
-local sway = false
 function start (song)
     showOnlyStrums = true -- remove all huds
     strumLine2Visible =  false
@@ -45,9 +44,6 @@ end
                 end
             end
         end
-    if sway == true then
-        camHudAngle = 5 * math.sin(currentBeat / 2)
-    end
     if waveside1 == true then
         local currentBeat = (songPos / 1000)*(bpm/50)
 		for i=0,7 do
@@ -98,10 +94,6 @@ function stepHit(step)
         strumLine1Visible =  true
         tweenCameraZoomOut(0.44, 0.5)
 	end
-    if step == 37 then
-        wavy = true
-        sway = true
-    end
     if step == 291 then
         wavy = false
         wavestop = true

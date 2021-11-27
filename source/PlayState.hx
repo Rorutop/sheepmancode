@@ -425,18 +425,15 @@ class PlayState extends MusicBeatState
 		if (SONG.stage == null) {
 			switch(storyWeek)
 			{
-				case 2: stageCheck = 'halloween';
-				case 3: stageCheck = 'philly';
-				case 4: stageCheck = 'limo';
-				case 5: if (songLowercase == 'winter-horrorland') {stageCheck = 'mallEvil';} else {stageCheck = 'mall';}
-				case 6: if (songLowercase == 'thorns') {stageCheck = 'schoolEvil';} else {stageCheck = 'school';}
+				case 7: stageCheck = 'stormtower';
+				case 8: stageCheck = 'tntCity';
 				//i should check if its stage (but this is when none is found in chart anyway)
 			}
 		} else {stageCheck = SONG.stage;}
 
 		switch(stageCheck)
 		{
-			case 'halloween': 
+			/*case 'halloween': 
 			{
 				curStage = 'spooky';
 				halloweenLevel = true;
@@ -757,7 +754,7 @@ class PlayState extends MusicBeatState
 								add(waveSprite);
 								add(waveSpriteFG);
 						*/
-			}
+			//}
 			case 'stage':
 				{
 						defaultCamZoom = 0.9;
@@ -802,6 +799,7 @@ class PlayState extends MusicBeatState
 						stormBG.animation.addByPrefix('idle','bg', 24, false);
 						stormBG.animation.addByPrefix('flash','bgFlash', 24, false);
 						stormBG.setGraphicSize(Std.int(stormBG.width * 2));
+						stormBG.antialiasing = false;
 						add(stormBG);
 						stormBG.animation.play('idle');
 						var towerBack:FlxSprite = new FlxSprite(-905, -300).loadGraphic(Paths.image('towerback', 'week7'));
@@ -844,6 +842,7 @@ class PlayState extends MusicBeatState
 						tornadoAnim.animation.addByPrefix('move','tornadoMOVING',24, true);
 						tornadoAnim.animation.play('move');
 						tornadoAnim.scrollFactor.set(1.4, 1.4);
+						tornadoAnim.antialiasing = true;
 						add(tornadoAnim);
 						add(towerBack);
 			
@@ -852,6 +851,7 @@ class PlayState extends MusicBeatState
 						clouds.antialiasing = true;
 						clouds.scrollFactor.set(1.4, 1.4);
 						clouds.active = false;
+						clouds.antialiasing = false;
 						add(clouds);
 						if (FlxG.save.data.distractions) add(thunderTop);
 
@@ -934,31 +934,8 @@ class PlayState extends MusicBeatState
 					tweenCamIn();
 				}
 
-			case "spooky":
-				dad.y += 200;
-			case "monster":
-				dad.y += 100;
-			case 'monster-christmas':
-				dad.y += 130;
 			case 'dad':
 				camPos.x += 400;
-			case 'pico':
-				camPos.x += 600;
-				dad.y += 300;
-			case 'parents-christmas':
-				dad.x -= 500;
-			case 'senpai':
-				dad.x += 150;
-				dad.y += 360;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			case 'senpai-angry':
-				dad.x += 150;
-				dad.y += 360;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			case 'spirit':
-				dad.x -= 150;
-				dad.y += 100;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'purpleshep':
 				dad.x -= 150;
 				dad.y -= -240;
@@ -2034,12 +2011,12 @@ class PlayState extends MusicBeatState
         }, 100);
     }
 	var tornadoCancel:FlxTween;
+	var noteMembersY = 1;
 	override public function update(elapsed:Float)
 	{
 		#if !debug
 		perfectMode = false;
 		#end
-		
 		if (curSong == 'dark-sheep')
 			{
 				
@@ -2143,6 +2120,17 @@ class PlayState extends MusicBeatState
 					whitesquarefast();
 				}
 			}
+		if (curSong.toLowerCase() == 'oh-golly')
+			{
+				if (curStep == 640)
+				{
+					whitesquare();
+				}
+				if (curStep == 890)
+				{
+					whitesquareFade();
+				}
+			}
 		if (PlayStateChangeables.botPlay && FlxG.keys.justPressed.ONE)
 			camHUD.visible = !camHUD.visible;
 
@@ -2156,7 +2144,7 @@ class PlayState extends MusicBeatState
 					removedVideo = true;
 				}
 			}
-		
+		noteMembersY = PlayStateChangeables.useDownscroll? 550: 50;
 		#if windows
 		if (executeModchart && luaModchart != null && songStarted)
 		{
@@ -2212,7 +2200,7 @@ class PlayState extends MusicBeatState
 		}
 
 		#end
-
+		
 		// reverse iterate to remove oldest notes first and not invalidate the iteration
 		// stop iteration as soon as a note is not removed
 		// all notes should be kept in the correct order and this is optimal, safe to do every frame/update
@@ -3131,11 +3119,24 @@ class PlayState extends MusicBeatState
 			switch(daRating)
 			{
 				case 'shit':
+					if (daNote.noteType == 2)
+						{
+							health -= 1;
+							daRating = 'shit';
+							FlxG.sound.play(Paths.sound('electricSound'));
+							trace("electric Sound loaded");
+							shits++;
+							score = 50;
+							ss = false;
+						}
+					else
+					{
 					daRating = 'shit';
 					score = 50;
 					health += 0.0;
 					ss = false;
 					shits++;
+					}
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.25;
 					if (storyDifficulty == 3)
@@ -4169,11 +4170,10 @@ class PlayState extends MusicBeatState
 		boyfriend.playAnim('scared', true);
 		gf.playAnim('scared', true);
 	}
-
 	var scrollspeedDrop:Bool = false;
 	var danced:Bool = false;
 	var stepOfLast = 0;
-	
+	var noteInBeat:Bool = false;
 	override function stepHit()
 	{
 		super.stepHit();
@@ -4181,13 +4181,67 @@ class PlayState extends MusicBeatState
 		{
 			resyncVocals();
 		}
+		var movenoteShit = 1;
+		var movenoteVar = 70;
 
+		movenoteShit = curBeat % 2 == 0? movenoteVar : -movenoteVar;
+		if (noteInBeat)
+		{
+			if (curStep % 4 == 0)
+			{
+				FlxTween.tween(playerStrums.members[0], {x: 690 - 100, y: noteMembersY + movenoteShit}, (Conductor.stepCrochet * 0.0019), {ease: FlxEase.circOut, type: BACKWARD, onComplete:
+					function notePosReset(tween:FlxTween):Void
+						{
+							playerStrums.members[0].y = noteMembersY;
+							playerStrums.members[1].y = noteMembersY;
+							playerStrums.members[2].y = noteMembersY;
+							playerStrums.members[3].y = noteMembersY;
+							cpuStrums.members[0].y = noteMembersY;
+							cpuStrums.members[1].y = noteMembersY;
+							cpuStrums.members[2].y = noteMembersY;
+							cpuStrums.members[3].y = noteMembersY;
+
+							playerStrums.members[0].x = 690;
+							playerStrums.members[1].x = 802;
+							playerStrums.members[2].x = 914;
+							playerStrums.members[3].x = 1026;
+							cpuStrums.members[0].x = 50;
+							cpuStrums.members[1].x = 162;
+							cpuStrums.members[2].x = 274;
+							cpuStrums.members[3].x = 386;
+							resetnote();
+						} });
+				FlxTween.tween(playerStrums.members[1], {x: 802 - 40, y: noteMembersY + movenoteShit / 2}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
+				FlxTween.tween(playerStrums.members[2], {x: 914 + 40, y: noteMembersY - movenoteShit / 2}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
+				FlxTween.tween(playerStrums.members[3], {x: 1026 + 100, y: noteMembersY - movenoteShit}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
+
+				FlxTween.tween(cpuStrums.members[0], {x: 50 - 100, y: noteMembersY + movenoteShit}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
+				FlxTween.tween(cpuStrums.members[1], {x: 162 - 40, y: noteMembersY + movenoteShit / 2}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
+				FlxTween.tween(cpuStrums.members[2], {x: 274 + 40, y: noteMembersY - movenoteShit / 2}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
+				FlxTween.tween(cpuStrums.members[3], {x: 386 + 100, y: noteMembersY - movenoteShit}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
+				/*playerStrums.members[0].x = 690;
+				playerStrums.members[1].x = 802;	
+				playerStrums.members[2].x = 914;
+				playerStrums.members[3].x = 1026;
+
+				cpuStrums.members[0].x = 50;
+				cpuStrums.members[1].x = 162;	
+				cpuStrums.members[2].x = 274;
+				cpuStrums.members[3].x = 386;	
+				*/
+			}
+		}
 		if (scrollspeedDrop && curBeat % 1 == 0)
 		{
 			PlayStateChangeables.scrollSpeed += 0.01;
 		}
 		if (curSong.toLowerCase() == 'oh-golly' && curStep != stepOfLast)
 			{
+				switch(curStep)
+				{
+					case 640: noteInBeat = true;
+					case 895: noteInBeat = false;
+				}
 				if (storyDifficulty == 3)
 				{
 					switch(curStep)
@@ -4691,13 +4745,6 @@ class PlayState extends MusicBeatState
 		
 		if (FlxG.save.data.camzoom)
 		{
-			// HARDCODING FOR MILF ZOOMS!
-			if (curSong.toLowerCase() == 'milf' && curBeat >= 168 && curBeat < 200 && camZooming && FlxG.camera.zoom < 1.35)
-			{
-				FlxG.camera.zoom += 0.015;
-				camHUD.zoom += 0.03;
-			}
-	
 			if (camZooming && FlxG.camera.zoom < 1.35 && curBeat % 4 == 0)
 			{
 				FlxG.camera.zoom += 0.015;

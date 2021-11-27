@@ -141,7 +141,7 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
-			case 'spooky':
+			/*case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
 				animation.addByPrefix('singUP', 'spooky UP NOTE', 24, false);
@@ -267,7 +267,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
-
+				*/
 			case 'bf':
 				var tex = Paths.getSparrowAtlas('characters/BOYFRIEND', 'shared');
 				frames = tex;
@@ -417,7 +417,7 @@ class Character extends FlxSprite
 				updateHitbox();
 				antialiasing = false;
 				flipX = true;
-
+			/*
 			case 'senpai':
 				frames = Paths.getSparrowAtlas('characters/senpai');
 				animation.addByPrefix('idle', 'Senpai Idle', 24, false);
@@ -504,7 +504,7 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
-
+				*/
 			case 'sheepman':
 				tex = Paths.getSparrowAtlas('characters/sheepman', 'shared');
 				frames = tex;

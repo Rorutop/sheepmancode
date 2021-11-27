@@ -26,12 +26,6 @@ class StoryMenuState extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['Tutorial'],
-		['Bopeebo', 'Fresh', 'Dad Battle'],
-		['Spookeez', 'South', "Monster"],
-		['Pico', 'Philly Nice', "Blammed"],
-		['Satin Panties', "High", "Milf"],
-		['Cocoa', 'Eggnog', 'Winter Horrorland'],
-		['Senpai', 'Roses', 'Thorns'],
 		['Dark-Sheep']
 	];
 	var curDifficulty:Int = 1;
@@ -40,12 +34,6 @@ class StoryMenuState extends MusicBeatState
 
 	var weekCharacters:Array<Dynamic> = [
 		['', 'bf', 'gf'],
-		['dad', 'bf', 'gf'],
-		['spooky', 'bf', 'gf'],
-		['pico', 'bf', 'gf'],
-		['mom', 'bf', 'gf'],
-		['parents-christmas', 'bf', 'gf'],
-		['senpai', 'bf', 'gf'],
 		['dark-sheep', 'bf' ,'gf']
 	];
 
@@ -288,7 +276,7 @@ class StoryMenuState extends MusicBeatState
 				if (FlxG.save.data.distractions) FlxG.sound.play(Paths.sound('cancelMenu'));
 				else FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
-		if (curWeek == 7)
+		if (curWeek == 2)
 		{
 			checklist1.alpha = 1;
 			checklist2.alpha = 1;

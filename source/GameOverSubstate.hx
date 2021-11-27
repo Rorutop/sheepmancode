@@ -6,12 +6,11 @@ import flixel.FlxSubState;
 import flixel.math.FlxPoint;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
-
+import flixel.FlxSprite;
 class GameOverSubstate extends MusicBeatSubstate
 {
 	var bf:Boyfriend;
 	var camFollow:FlxObject;
-
 	var stageSuffix:String = "";
 
 	public function new(x:Float, y:Float)
@@ -30,8 +29,17 @@ class GameOverSubstate extends MusicBeatSubstate
 		super();
 
 		Conductor.songPosition = 0;
-
 		bf = new Boyfriend(x, y, daBf);
+		var shock:FlxSprite = new FlxSprite(15, -15);
+		shock.frames = Paths.getSparrowAtlas('shockDeath','shared');
+		shock.animation.addByPrefix('shock','shockfade', 24, false);
+		shock.antialiasing = false;
+		switch (daStage)
+		{
+			case 'stormtower':
+			add(shock);
+			FlxG.sound.play(Paths.sound('shock', 'shared'));
+		}
 		add(bf);
 
 		camFollow = new FlxObject(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y, 1, 1);
@@ -46,6 +54,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		FlxG.camera.target = null;
 
 		bf.playAnim('firstDeath');
+		shock.animation.play('shock');
 	}
 
 	override function update(elapsed:Float)
