@@ -276,7 +276,7 @@ class StoryMenuState extends MusicBeatState
 				if (FlxG.save.data.distractions) FlxG.sound.play(Paths.sound('cancelMenu'));
 				else FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
-		if (curWeek == 2)
+		if (curWeek == 1)
 		{
 			checklist1.alpha = 1;
 			checklist2.alpha = 1;
