@@ -10,8 +10,8 @@ function update()
      end
     if wavestop == true then
         for i = 0,7 do
-            tweenPosXAngle(i, _G['defaultStrum'..i..'X'], 0, 0, 'setDefault')
-			tweenPosYAngle(i, _G['defaultStrum'..i..'Y'], 0, 0, 'setDefault')
+            tweenPosXAngle(i, _G['defaultStrum'..i..'X'], 0, 0.5, 'setDefault')
+			tweenPosYAngle(i, _G['defaultStrum'..i..'Y'], 0, 0.5, 'setDefault')
         end
     end
 end
@@ -19,11 +19,11 @@ function stepHit(step)
 if step == 512 then
     wavy = true
 end
-if step == 639 then
+if step == 630 then
     wavy = false
     wavestop = true
 end
-if step == 640 then
+if step == 639 then
     wavestop = false
 end 
 end

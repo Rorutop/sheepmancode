@@ -100,11 +100,11 @@ class SupportState extends MusicBeatState
                 if (controls.ACCEPT)
                     {
                         FlxG.sound.play(Paths.sound('confirmMenu'));
-                        if (supportShit[curSelected] == 'Chroma (Who created those characters and dark sheep music)')
+                        if (supportShit[curSelected] == 'Chroma')
                         {
-                            fancyOpenURL("https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game");
+                            fancyOpenURL("https://www.c-h-r-o-m-a.jp/");
                         }
-                        if (supportShit[curSelected] == 'Rorutop (Coder, Charter, Artist)')
+                        if (supportShit[curSelected] == 'Rorutop')
                         {
                             fancyOpenURL("https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game");
                         }

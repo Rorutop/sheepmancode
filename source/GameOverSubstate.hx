@@ -30,7 +30,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		Conductor.songPosition = 0;
 		bf = new Boyfriend(x, y, daBf);
-		var shock:FlxSprite = new FlxSprite(15, -15);
+		var shock:FlxSprite = new FlxSprite(Std.int(bf.x)-360, Std.int(bf.y)-155);
 		shock.frames = Paths.getSparrowAtlas('shockDeath','shared');
 		shock.animation.addByPrefix('shock','shockfade', 24, false);
 		shock.antialiasing = false;

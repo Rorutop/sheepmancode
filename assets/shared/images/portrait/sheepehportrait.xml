@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sheepehportrait.png">
+	<!-- Created with Adobe Animate version 20.5.1.31044 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="sheepeh0000" x="0" y="0" width="365" height="360"/>
+	<SubTexture name="sheepeh0001" x="0" y="0" width="365" height="360"/>
+	<SubTexture name="sheepeh0002" x="0" y="0" width="365" height="360"/>
+	<SubTexture name="sheepeh0003" x="365" y="0" width="365" height="360"/>
+	<SubTexture name="sheepeh0004" x="365" y="0" width="365" height="360"/>
+	<SubTexture name="sheepeh0005" x="365" y="0" width="365" height="360"/>
+	<SubTexture name="sheepeh0006" x="0" y="360" width="365" height="360"/>
+	<SubTexture name="sheepeh0007" x="0" y="360" width="365" height="360"/>
+	<SubTexture name="sheepeh0008" x="0" y="360" width="365" height="360"/>
+	<SubTexture name="sheepeh0009" x="365" y="360" width="365" height="360"/>
+</TextureAtlas>

@@ -170,6 +170,7 @@ class PlayState extends MusicBeatState
 	var camerabySide:Bool = true;
 	var limo:FlxSprite;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
+	var tntDancers:FlxSprite;
 	var fastCar:FlxSprite;
 	var songName:FlxText;
 	var upperBoppers:FlxSprite;
@@ -289,8 +290,6 @@ class PlayState extends MusicBeatState
 		PlayStateChangeables.safeFrames = FlxG.save.data.frames;
 		PlayStateChangeables.scrollSpeed = FlxG.save.data.scrollSpeed;
 		PlayStateChangeables.botPlay = FlxG.save.data.botplay;
-
-
 		// pre lowercasing the song name (create)
 		var songLowercase = StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase();
 		switch (songLowercase) {
@@ -411,6 +410,8 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('roses/rosesDialogue'));
 			case 'thorns':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
+			case 'dark-sheep':
+			dialogue = CoolUtil.coolTextFile(Paths.txt('dark-sheep/sheepdialog'));
 		}
 
 		//defaults if no stage was found in chart
@@ -426,7 +427,7 @@ class PlayState extends MusicBeatState
 			switch(storyWeek)
 			{
 				case 7: stageCheck = 'stormtower';
-				case 8: stageCheck = 'tntCity';
+				case 8: stageCheck = 'tntcity';
 				//i should check if its stage (but this is when none is found in chart anyway)
 			}
 		} else {stageCheck = SONG.stage;}
@@ -862,6 +863,39 @@ class PlayState extends MusicBeatState
 						rainShit.animation.play('rain');
 						
 				}
+			case 'tntcity':
+			{
+				defaultCamZoom = 0.65;
+				curStage = 'tntcity';
+				var skygolly:FlxSprite = new FlxSprite(-530, -400).loadGraphic(Paths.image('sky', 'golly'));
+				skygolly.antialiasing = false;
+				skygolly.scrollFactor.set(0.5, 0.5);
+				skygolly.active = false;
+					add(skygolly);
+				var tntHouse:FlxSprite = new FlxSprite(-530, -330).loadGraphic(Paths.image('house','golly'));
+				tntHouse.antialiasing = false;
+				tntHouse.scrollFactor.set(0.9, 0.9);
+				tntHouse.active = false;
+					add(tntHouse);
+				var groundgolly:FlxSprite = new FlxSprite(-530,-300).loadGraphic(Paths.image('ground','golly'));
+				groundgolly.antialiasing = false;
+				groundgolly.scrollFactor.set(1, 1);
+				groundgolly.active = false;
+					add(groundgolly);
+				tntDancers = new FlxSprite(-530, groundgolly.y + 430);
+				tntDancers.frames = Paths.getSparrowAtlas("tntdancers",'golly');
+				tntDancers.animation.addByIndices('danceLeft', 'tntDancers', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19], "", 24, false);
+				tntDancers.animation.addByIndices('danceRight', 'tntDancers', [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], "", 24, false);
+				tntDancers.animation.play('danceLeft');
+				tntDancers.antialiasing = true;
+				tntDancers.scrollFactor.set(1, 1);
+						add(tntDancers);
+				var table:FlxSprite = new FlxSprite(-530,-330).loadGraphic(Paths.image('table','golly'));
+				table.antialiasing = false;
+				table.scrollFactor.set(1, 1);
+				table.active = false;
+					add(table);
+			}
 			default:
 			{
 					defaultCamZoom = 0.9;
@@ -938,7 +972,7 @@ class PlayState extends MusicBeatState
 				camPos.x += 400;
 			case 'purpleshep':
 				dad.x -= 150;
-				dad.y -= -240;
+				dad.y -= -200;
 			case 'sheepman':
 				dad.x -= 120;
 				dad.y += 130;
@@ -1221,6 +1255,8 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
 				case 'thorns':
+					schoolIntro(doof);
+				case 'dark-sheep':
 					schoolIntro(doof);
 				default:
 					startCountdown();
@@ -4174,6 +4210,8 @@ class PlayState extends MusicBeatState
 	var danced:Bool = false;
 	var stepOfLast = 0;
 	var noteInBeat:Bool = false;
+	var tntdance:Bool = false;
+	var dancerNum:Int = 4;
 	override function stepHit()
 	{
 		super.stepHit();
@@ -4189,7 +4227,7 @@ class PlayState extends MusicBeatState
 		{
 			if (curStep % 4 == 0)
 			{
-				FlxTween.tween(playerStrums.members[0], {x: 690 - 100, y: noteMembersY + movenoteShit}, (Conductor.stepCrochet * 0.0019), {ease: FlxEase.circOut, type: BACKWARD, onComplete:
+				FlxTween.tween(playerStrums.members[0], {x: 690 - 100, y: noteMembersY + movenoteShit}, (Conductor.stepCrochet * 0.0018), {ease: FlxEase.circOut, type: BACKWARD, onComplete:
 					function notePosReset(tween:FlxTween):Void
 						{
 							playerStrums.members[0].y = noteMembersY;
@@ -4211,14 +4249,14 @@ class PlayState extends MusicBeatState
 							cpuStrums.members[3].x = 386;
 							resetnote();
 						} });
-				FlxTween.tween(playerStrums.members[1], {x: 802 - 40, y: noteMembersY + movenoteShit / 2}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
-				FlxTween.tween(playerStrums.members[2], {x: 914 + 40, y: noteMembersY - movenoteShit / 2}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
-				FlxTween.tween(playerStrums.members[3], {x: 1026 + 100, y: noteMembersY - movenoteShit}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
+				FlxTween.tween(playerStrums.members[1], {x: 802 - 40, y: noteMembersY + movenoteShit / 2}, (Conductor.stepCrochet * 0.0018), {ease: FlxEase.circOut, type: BACKWARD});
+				FlxTween.tween(playerStrums.members[2], {x: 914 + 40, y: noteMembersY - movenoteShit / 2}, (Conductor.stepCrochet * 0.0018), {ease: FlxEase.circOut, type: BACKWARD});
+				FlxTween.tween(playerStrums.members[3], {x: 1026 + 100, y: noteMembersY - movenoteShit}, (Conductor.stepCrochet * 0.0018), {ease: FlxEase.circOut, type: BACKWARD});
 
-				FlxTween.tween(cpuStrums.members[0], {x: 50 - 100, y: noteMembersY + movenoteShit}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
-				FlxTween.tween(cpuStrums.members[1], {x: 162 - 40, y: noteMembersY + movenoteShit / 2}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
-				FlxTween.tween(cpuStrums.members[2], {x: 274 + 40, y: noteMembersY - movenoteShit / 2}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
-				FlxTween.tween(cpuStrums.members[3], {x: 386 + 100, y: noteMembersY - movenoteShit}, (Conductor.stepCrochet * 0.002), {ease: FlxEase.circOut, type: BACKWARD});
+				FlxTween.tween(cpuStrums.members[0], {x: 50 - 100, y: noteMembersY + movenoteShit}, (Conductor.stepCrochet * 0.0018), {ease: FlxEase.circOut, type: BACKWARD});
+				FlxTween.tween(cpuStrums.members[1], {x: 162 - 40, y: noteMembersY + movenoteShit / 2}, (Conductor.stepCrochet * 0.0018), {ease: FlxEase.circOut, type: BACKWARD});
+				FlxTween.tween(cpuStrums.members[2], {x: 274 + 40, y: noteMembersY - movenoteShit / 2}, (Conductor.stepCrochet * 0.0018), {ease: FlxEase.circOut, type: BACKWARD});
+				FlxTween.tween(cpuStrums.members[3], {x: 386 + 100, y: noteMembersY - movenoteShit}, (Conductor.stepCrochet * 0.0018), {ease: FlxEase.circOut, type: BACKWARD});
 				/*playerStrums.members[0].x = 690;
 				playerStrums.members[1].x = 802;	
 				playerStrums.members[2].x = 914;
@@ -4233,14 +4271,23 @@ class PlayState extends MusicBeatState
 		}
 		if (scrollspeedDrop && curBeat % 1 == 0)
 		{
-			PlayStateChangeables.scrollSpeed += 0.01;
+			PlayStateChangeables.scrollSpeed += 0.005;
 		}
-		if (curSong.toLowerCase() == 'oh-golly' && curStep != stepOfLast)
+		if (curSong.toLowerCase() == 'oh-golly')
 			{
 				switch(curStep)
 				{
+					case 128: sheepZoom = 0.06;
+					dancerNum = 2;
+					case 256: sheepZoom = 0.2;
+					dancerNum = 1;
+					case 512: sheepZoom = 0.15;
+					case 576: sheepZoom = 0.3;
 					case 640: noteInBeat = true;
 					case 895: noteInBeat = false;
+								sheepZoom = 0.06;
+					case 896: resetnote();
+					dancerNum = 2;
 				}
 				if (storyDifficulty == 3)
 				{
@@ -4700,9 +4747,9 @@ class PlayState extends MusicBeatState
 
 	}
 
-
 	var lightningStrikeBeat:Int = 0;
 	var lightningOffset:Int = 8;
+
 	override function beatHit()
 	{
 		super.beatHit();
@@ -4742,7 +4789,6 @@ class PlayState extends MusicBeatState
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
 		wiggleShit.update(Conductor.crochet);
-		
 		if (FlxG.save.data.camzoom)
 		{
 			if (camZooming && FlxG.camera.zoom < 1.35 && curBeat % 4 == 0)
@@ -4750,7 +4796,7 @@ class PlayState extends MusicBeatState
 				FlxG.camera.zoom += 0.015;
 				camHUD.zoom += 0.03;
 			}
-			if (curSong.toLowerCase() == 'dark-sheep' && camZooming && FlxG.camera.zoom < 1.35 && curBeat % 1 == 0)
+			if (camZooming && FlxG.camera.zoom < 1.35 && curBeat % 1 == 0)
 			{
 				FlxG.camera.zoom += (sheepZoom / 2);
 				camHUD.zoom += (sheepZoom);
@@ -4820,7 +4866,14 @@ class PlayState extends MusicBeatState
 		{
 			boyfriend.playAnim('idle');
 		}
-		
+		if (curStage == 'tntcity' && curBeat % dancerNum == 0)
+			{
+				tntdance = !tntdance;
+				if (tntdance)
+				tntDancers.animation.play('danceRight', true);
+				else
+				tntDancers.animation.play('danceLeft', true);
+			}
 
 		if (curBeat % 8 == 7 && curSong == 'Bopeebo')
 		{
@@ -4832,7 +4885,6 @@ class PlayState extends MusicBeatState
 				boyfriend.playAnim('hey', true);
 				dad.playAnim('cheer', true);
 			}
-
 		switch (curStage)
 		{
 			case 'school':
@@ -4845,17 +4897,6 @@ class PlayState extends MusicBeatState
 					upperBoppers.animation.play('bop', true);
 					bottomBoppers.animation.play('bop', true);
 					santa.animation.play('idle', true);
-				}
-
-			case 'limo':
-				if(FlxG.save.data.distractions){
-					grpLimoDancers.forEach(function(dancer:BackgroundDancer)
-						{
-							dancer.dance();
-						});
-		
-						if (FlxG.random.bool(10) && fastCarCanDrive)
-							fastCarDrive();
 				}
 			case "philly":
 				if(FlxG.save.data.distractions){

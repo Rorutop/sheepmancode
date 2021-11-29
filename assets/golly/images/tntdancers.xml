@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tntdancers.png">
+	<!-- Created with Adobe Animate version 20.5.1.31044 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="tntDancers0000" x="0" y="0" width="2150" height="693" frameX="-50" frameY="-45" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0001" x="2150" y="0" width="2297" height="709" frameX="0" frameY="-54" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0002" x="2150" y="0" width="2297" height="709" frameX="0" frameY="-54" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0003" x="4447" y="0" width="2234" height="722" frameX="-7" frameY="-40" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0004" x="0" y="722" width="2198" height="722" frameX="-43" frameY="-40" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0005" x="2198" y="722" width="2176" height="717" frameX="-43" frameY="-28" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0006" x="4374" y="722" width="2162" height="719" frameX="-50" frameY="-16" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0007" x="0" y="1444" width="2143" height="712" frameX="-61" frameY="-16" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0008" x="2143" y="1444" width="2141" height="721" frameX="-61" frameY="-7" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0009" x="4284" y="1444" width="2141" height="721" frameX="-61" frameY="-7" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0010" x="4284" y="1444" width="2141" height="721" frameX="-61" frameY="-7" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0011" x="0" y="2165" width="2148" height="723" frameX="-61" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0012" x="0" y="2165" width="2148" height="723" frameX="-61" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0013" x="2148" y="2165" width="2148" height="723" frameX="-61" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0014" x="4296" y="2165" width="2145" height="723" frameX="-64" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0015" x="0" y="2888" width="2145" height="718" frameX="-64" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0016" x="0" y="2888" width="2145" height="718" frameX="-64" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0017" x="2145" y="2888" width="2145" height="718" frameX="-64" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0018" x="4290" y="2888" width="2126" height="716" frameX="-75" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0019" x="0" y="3606" width="2126" height="716" frameX="-75" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0020" x="2126" y="3606" width="2125" height="693" frameX="-75" frameY="-45" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0021" x="4251" y="3606" width="2247" height="709" frameX="-50" frameY="-54" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0022" x="0" y="4322" width="2226" height="709" frameX="-71" frameY="-54" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0023" x="2226" y="4322" width="2170" height="722" frameX="-71" frameY="-40" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0024" x="4396" y="4322" width="2166" height="722" frameX="-75" frameY="-40" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0025" x="0" y="5044" width="2144" height="717" frameX="-75" frameY="-28" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0026" x="2144" y="5044" width="2137" height="719" frameX="-75" frameY="-16" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0027" x="4281" y="5044" width="2129" height="712" frameX="-75" frameY="-16" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0028" x="0" y="5763" width="2131" height="721" frameX="-71" frameY="-7" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0029" x="2131" y="5763" width="2131" height="721" frameX="-71" frameY="-7" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0030" x="2131" y="5763" width="2131" height="721" frameX="-71" frameY="-7" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0031" x="4262" y="5763" width="2144" height="723" frameX="-65" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0032" x="0" y="6486" width="2144" height="723" frameX="-65" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0033" x="0" y="6486" width="2144" height="723" frameX="-65" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0034" x="0" y="6486" width="2144" height="723" frameX="-65" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0035" x="2144" y="6486" width="2157" height="718" frameX="-52" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0036" x="4301" y="6486" width="2157" height="718" frameX="-52" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0037" x="4301" y="6486" width="2157" height="718" frameX="-52" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0038" x="0" y="7209" width="2153" height="716" frameX="-48" frameY="0" frameWidth="2297" frameHeight="763"/>
+	<SubTexture name="tntDancers0039" x="0" y="7209" width="2153" height="716" frameX="-48" frameY="0" frameWidth="2297" frameHeight="763"/>
+</TextureAtlas>
