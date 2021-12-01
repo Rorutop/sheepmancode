@@ -49,7 +49,7 @@ class SupportState extends MusicBeatState
             ['Mod Team',                    '',                         '', ''],
             ['Rorutop',                     'rorutop',                  'Mod Leader with 4 skillz', 'https://gamebanana.com/members/1831109'],
             ['SuhoTUE',                      'suho',                     'BG Artist', 'https://gamebanana.com/members/1857006'],
-            ['BOWZERR O',                           '73',                        'Musician', 'https://gamebanana.com/members/1856730'],
+            ['BOWZERR O',                     '73',                        'Musician', 'https://gamebanana.com/members/1856730'],
             ['Fire Fuel',                    'fuel',                      'Beta tester', ''],
             ['Created Dark Sheep',            '',                          '', ''],
             ['Chroma',                       'chroma',                     'nice funny sheep bro', 'https://www.c-h-r-o-m-a.jp/profile/index.html'],
