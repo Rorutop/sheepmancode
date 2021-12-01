@@ -1,14 +1,3 @@
-# Changelog for 1.5.2
-
-Changes marked with 💖 will be listed in the short version of the changelog in `version.downloadMe`.
-
-### Additions
-- [PR #786](https://github.com/KadeDev/Kade-Engine/pull/786): Add Acceleration, Drag and Velocity to X and Y for Actors in modcharts
-
-### Bugfixes
-- [PR #756](https://github.com/KadeDev/Kade-Engine/pull/756):  Fix bugs with combo counter
-- 💖 PRs [#763](https://github.com/KadeDev/Kade-Engine/pull/763), [#789](https://github.com/KadeDev/Kade-Engine/pull/789): Fix bug where songs with spaces in the name would crash
-- Fix skipping notes for judgements
-
-## Links
-[GitHub Release](https://github.com/KadeDev/Kade-Engine/releases/tag/1.5.2) · [Last Windows CI build]() · [Last macOS CI build]() · [Last Linux CI build]()
+version https://git-lfs.github.com/spec/v1
+oid sha256:63e5468de243a1e99f3d8e1f8473d7fe2e675e1d1aab8a02974e84bc5458ce94
+size 765

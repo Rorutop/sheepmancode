@@ -1,10 +1,3 @@
----
-name: Enhancement
-about: Add a new feature
-title: 'Enhancement: '
-labels: enhancement
----
-#### Please check for duplicates or similar PRs before creating this issue.
-## Does this PR close any issue(s)? If so, link them below.
-
-## What do your change(s) add, and why should they be implemented?
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d74200ac132fa769005cbb06e5d021d0a0fffbc331d1f18def3f23d7159f506
+size 298

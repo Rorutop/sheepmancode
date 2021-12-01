@@ -1,8 +1,3 @@
-# Changelogs
-
-- [Latest](latest) (Contains changes that are not in a release yet)
-- [1.5.3](changelog-1.5.3)
-- [1.5.2](changelog-1.5.2)
-- [1.5.1](changelog-1.5.1)
-- [1.5.0](changelog-1.5.0)
-- [1.4.2 and before](changelog-pre)
+version https://git-lfs.github.com/spec/v1
+oid sha256:fec5095d86439d58c55c78ada252f35b0592eab9251f3ba1457a5ffcb9fe7d9c
+size 226
