@@ -3,10 +3,11 @@ package;
 import lime.utils.Assets;
 
 using StringTools;
-
+import flixel.FlxG;
+import openfl.utils.Assets;
 class CoolUtil
 {
-	public static var difficultyArray:Array<String> = ['EASY', "NORMAL", "HARD", "INSANE"];
+	public static var difficultyArray:Array<String> = ["NORMAL", "HARD", "INSANE"];
 
 	public static function difficultyString():String
 	{
@@ -45,5 +46,12 @@ class CoolUtil
 			dumbArray.push(i);
 		}
 		return dumbArray;
+	}
+	public static function browserLoad(site:String) {
+		#if linux
+		Sys.command('/usr/bin/xdg-open', [site]);
+		#else
+		FlxG.openURL(site);
+		#end
 	}
 }

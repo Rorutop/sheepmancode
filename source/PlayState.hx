@@ -323,12 +323,10 @@ class PlayState extends MusicBeatState
 		switch (storyDifficulty)
 		{
 			case 0:
-				storyDifficultyText = "Easy";
-			case 1:
 				storyDifficultyText = "Normal";
-			case 2:
+			case 1:
 				storyDifficultyText = "Hard";
-			case 3:
+			case 2:
 				storyDifficultyText = "Insane";
 		}
 
@@ -882,7 +880,7 @@ class PlayState extends MusicBeatState
 				groundgolly.scrollFactor.set(1, 1);
 				groundgolly.active = false;
 					add(groundgolly);
-				tntDancers = new FlxSprite(-530, groundgolly.y + 430);
+				tntDancers = new FlxSprite(-530, groundgolly.y + 440);
 				tntDancers.frames = Paths.getSparrowAtlas("tntdancers",'golly');
 				tntDancers.animation.addByIndices('danceLeft', 'tntDancers', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19], "", 24, false);
 				tntDancers.animation.addByIndices('danceRight', 'tntDancers', [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39], "", 24, false);
@@ -890,7 +888,7 @@ class PlayState extends MusicBeatState
 				tntDancers.antialiasing = true;
 				tntDancers.scrollFactor.set(1, 1);
 						add(tntDancers);
-				var table:FlxSprite = new FlxSprite(-530,-330).loadGraphic(Paths.image('table','golly'));
+				var table:FlxSprite = new FlxSprite(-530,-340).loadGraphic(Paths.image('table','golly'));
 				table.antialiasing = false;
 				table.scrollFactor.set(1, 1);
 				table.active = false;
@@ -972,7 +970,7 @@ class PlayState extends MusicBeatState
 				camPos.x += 400;
 			case 'purpleshep':
 				dad.x -= 150;
-				dad.y -= -200;
+				dad.y -= -255;
 			case 'sheepman':
 				dad.x -= 120;
 				dad.y += 130;
@@ -1145,7 +1143,7 @@ class PlayState extends MusicBeatState
 		add(healthBar);
 
 		// Add Kade Engine watermark
-		kadeEngineWatermark = new FlxText(4,healthBarBG.y + 50,0,SONG.song + " " + (storyDifficulty == 3 ? "Insane" : storyDifficulty == 2 ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy") + (Main.watermarks ? " - KE " + MainMenuState.kadeEngineVer : ""), 16);
+		kadeEngineWatermark = new FlxText(4,healthBarBG.y + 50,0,SONG.song + " " + (storyDifficulty == 2 ? "Insane" : storyDifficulty == 1 ? "Hard" : 'Normal') + (Main.watermarks ? " - KE " + MainMenuState.kadeEngineVer : ""), 16);
 		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		kadeEngineWatermark.scrollFactor.set();
 		add(kadeEngineWatermark);
@@ -2035,7 +2033,7 @@ class PlayState extends MusicBeatState
 	}
 	function doHealthDecrease():Void
 	{
-		if (health >= 0 && storyDifficulty == 3)
+		if (health >= 0 && storyDifficulty == 2)
 			health -= 0.03;
 	}
 
@@ -2638,7 +2636,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if (health <= 0 && storyDifficulty != 3 || insaneDeathShit && health <= 0 || health <= 0 && missDeath && storyDifficulty == 3)
+		if (health <= 0 && storyDifficulty != 2 || insaneDeathShit && health <= 0 || health <= 0 && missDeath && storyDifficulty == 2)
 		{
 			{
 			boyfriend.stunned = true;
@@ -3175,7 +3173,7 @@ class PlayState extends MusicBeatState
 					}
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.25;
-					if (storyDifficulty == 3)
+					if (storyDifficulty == 2)
 					{
 						insaneDeathShit = true;
 						new FlxTimer().start(1, function(tmr:FlxTimer)
@@ -3191,7 +3189,7 @@ class PlayState extends MusicBeatState
 					bads++;
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.50;
-					if (storyDifficulty == 3)
+					if (storyDifficulty == 2)
 						{
 							insaneDeathShit = true;
 							new FlxTimer().start(1, function(tmr:FlxTimer)
@@ -3208,7 +3206,7 @@ class PlayState extends MusicBeatState
 						health += 0.05;
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 0.75;
-					if (storyDifficulty == 3)
+					if (storyDifficulty == 2)
 					{
 						healthGain();
 					}
@@ -3218,7 +3216,7 @@ class PlayState extends MusicBeatState
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 1;
 					sicks++;
-					if (storyDifficulty == 3)
+					if (storyDifficulty == 2)
 					{
 						healthGain();
 					}
@@ -3757,7 +3755,7 @@ class PlayState extends MusicBeatState
 	{
 		if (!boyfriend.stunned)
 		{
-			if (storyDifficulty == 3)
+			if (storyDifficulty == 2)
 			health -= 0.05;
 			else
 			health -= 0.04;
@@ -4277,19 +4275,19 @@ class PlayState extends MusicBeatState
 			{
 				switch(curStep)
 				{
-					case 128: sheepZoom = 0.06;
+					case 127: sheepZoom = 0.06;
 					dancerNum = 2;
-					case 256: sheepZoom = 0.2;
+					case 255: sheepZoom = 0.2;
 					dancerNum = 1;
-					case 512: sheepZoom = 0.15;
-					case 576: sheepZoom = 0.3;
+					case 511: sheepZoom = 0.15;
+					case 575: sheepZoom = 0.3;
 					case 640: noteInBeat = true;
 					case 895: noteInBeat = false;
-								sheepZoom = 0.06;
+					case 894: sheepZoom = 0.06;
 					case 896: resetnote();
 					dancerNum = 2;
 				}
-				if (storyDifficulty == 3)
+				if (storyDifficulty == 2)
 				{
 					switch(curStep)
 					{
@@ -4326,7 +4324,7 @@ class PlayState extends MusicBeatState
 				case 450:
 				sheepZoom = 0;
 				case 516:
-				if (storyDifficulty == 3)
+				if (storyDifficulty == 2)
 				{
 					FlxTween.tween(cloudSmall1, { alpha: 1 }, 1);
 					FlxTween.tween(cloudSmall2, { alpha: 1 }, 1);
@@ -4342,7 +4340,7 @@ class PlayState extends MusicBeatState
 					}
 				}
 				case 566:
-				if (storyDifficulty == 3)
+				if (storyDifficulty == 2)
 				{
 				FlxTween.tween(cloudSmall1, { alpha: 0 }, 0.5);
 				FlxTween.tween(cloudSmall2, { alpha: 0 }, 0.5);
@@ -4389,13 +4387,13 @@ class PlayState extends MusicBeatState
 				sheepZoom = 0.1;
 				case 1092:
 				sheepZoom = 0.04;
-				if (storyDifficulty == 3)
+				if (storyDifficulty == 2)
 					{
 						FlxTween.tween(cloudSmall1, { alpha: 1 }, 1);
 						FlxTween.tween(cloudSmall2, { alpha: 1 }, 1);
 					}
 				case 1213:
-				if (storyDifficulty == 3)
+				if (storyDifficulty == 2)
 					{
 						FlxTween.tween(cloudSmall1, { alpha: 0 }, 1);
 						FlxTween.tween(cloudSmall2, { alpha: 0 }, 1);
@@ -4535,7 +4533,7 @@ class PlayState extends MusicBeatState
 					FlxG.camera.zoom += 0.020;
 					camHUD.zoom += 0.2;
 				}
-				if (storyDifficulty == 3)
+				if (storyDifficulty == 2)
 				{
 					switch(curStep)
 					{

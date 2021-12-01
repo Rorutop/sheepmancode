@@ -20,15 +20,15 @@ class SupportState extends MusicBeatState
 
     var curSelected:Int = 0;
     var isCat:Bool = false;
-    var supportShit:Array<String> = ['Chroma (Who created those characters and dark sheep music)', 'Rorutop (Coder, Charter, Artist)'];
+    var supportShit:Array<Dynamic> = [];
 	var camFollow:FlxObject;
     var currentSelectedCat:String;
     private var grpSupport:FlxTypedGroup<Alphabet>;
     public static var firstStart:Bool = true;
     public static var finishedFunnyMove:Bool = false;
-
+    private var iconArray:Array<CreditIcons> = [];
     public var acceptInput:Bool = true;
-
+    var descText:FlxText;
 	private var currentDescription:String = "";
 
 
@@ -45,10 +45,26 @@ class SupportState extends MusicBeatState
 
 		grpSupport = new FlxTypedGroup<Alphabet>();
 		add(grpSupport);
-
+        var textcredit = [
+            ['Mod Team',                    '',                         '', ''],
+            ['Rorutop',                     'rorutop',                  'Mod Leader with 4 skillz', 'https://gamebanana.com/members/1831109'],
+            ['SuhoTUE',                      'suho',                     'BG Artist', 'https://gamebanana.com/members/1857006'],
+            ['BOWZERR O',                           '73',                        'Musician', 'https://gamebanana.com/members/1856730'],
+            ['Fire Fuel',                    'fuel',                      'Beta tester', ''],
+            ['Created Dark Sheep',            '',                          '', ''],
+            ['Chroma',                       'chroma',                     'nice funny sheep bro', 'https://www.c-h-r-o-m-a.jp/profile/index.html'],
+            ['Special Thanks',                  '',                         '', ''],
+            ['Deogracio',                     'deo',                        '', 'https://www.youtube.com/channel/UCF4abs-8CE6Ybxj3KTXaHsw'],
+            ['Edakirah',                      'eda',                        '', ''],
+            ['Some Discord Guys',             'discord',                    '', 'https://discord.gg/vCpEewF3Ve'],
+            ['Kris',                          'kris',                      'kris', 'https://gamebanana.com/members/1841533']
+                        ];
+        for(i in textcredit){
+			supportShit.push(i);
+		}
 		for (i in 0...supportShit.length)
 		{
-            var supportText:Alphabet = new Alphabet(0, (70 * i) + 30, supportShit[i], true, false, true);
+            var supportText:Alphabet = new Alphabet(0, (70 * i), supportShit[i][0], true, false, true);
 			supportText.isMenuItem = true;
 			supportText.targetY = i;
 			grpSupport.add(supportText);
@@ -61,9 +77,21 @@ class SupportState extends MusicBeatState
 					}});
 			else
 				supportText.y = 60 + (i * 160);
+
+            var icon:CreditIcons = new CreditIcons(supportShit[i][1]);
+				icon.xAdd = supportText.width + 10;
+				icon.sprTracker = supportText;
+	
+				// using a FlxGroup is too much fuss!
+				iconArray.push(icon);
+				add(icon);
 		}
         FlxG.camera.follow(camFollow, null, 0.60 * (60 / FlxG.save.data.fpsCap));
-
+        descText = new FlxText(50, 600, 1180, "", 32);
+		descText.setFormat(Paths.font("vcr.ttf"), 34, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		descText.scrollFactor.set();
+		descText.borderSize = 2.4;
+		add(descText);
 		currentDescription = "none";
 
 		super.create();
@@ -99,14 +127,9 @@ class SupportState extends MusicBeatState
                     changeSelection(1);
                 if (controls.ACCEPT)
                     {
-                        FlxG.sound.play(Paths.sound('confirmMenu'));
-                        if (supportShit[curSelected] == 'Chroma')
-                        {
-                            fancyOpenURL("https://www.c-h-r-o-m-a.jp/");
-                        }
-                        if (supportShit[curSelected] == 'Rorutop')
-                        {
-                            fancyOpenURL("https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game");
+                        if (supportShit[curSelected][3] != '')
+                      {  FlxG.sound.play(Paths.sound('confirmMenu'));
+                        CoolUtil.browserLoad(supportShit[curSelected][3]);
                         }
                     }
             }
@@ -149,5 +172,6 @@ class SupportState extends MusicBeatState
                     // item.setGraphicSize(Std.int(item.width));
                 }
             }
+            descText.text = supportShit[curSelected][2];
         }
 }
