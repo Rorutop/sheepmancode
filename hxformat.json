@@ -1,16 +1,3 @@
-{
-	"lineEnds": {
-		"leftCurly": "both",
-		"rightCurly": "both",
-		"emptyCurly": "break",
-		"objectLiteralCurly": {
-			"leftCurly": "after"
-		}
-	},
-	"sameLine": {
-		"ifElse": "next",
-		"doWhile": "next",
-		"tryBody": "next",
-		"tryCatch": "next"
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:148447071d3fb542c26dfcc67c2ea9393bdedfc3883a6d3a627ae9068a051a2e
+size 250

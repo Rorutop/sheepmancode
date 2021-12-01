@@ -1,9 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="pauseUI.png">
-	<!-- Created with Adobe Animate version 20.0.0.17400 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="bluecancel instance 10000" x="0" y="0" width="977" height="200"/>
-	<SubTexture name="bluereplay instance 10000" x="261" y="409" width="256" height="200"/>
-	<SubTexture name="cancelyellow instance 10000" x="0" y="205" width="977" height="199"/>
-	<SubTexture name="yellowreplay instance 10000" x="0" y="409" width="256" height="200"/>
-</TextureAtlas>
+version https://git-lfs.github.com/spec/v1
+oid sha256:75633f25ad6fe42fa81609412fd473a7b185b163329d45ba81b9612fed4d2ac8
+size 560

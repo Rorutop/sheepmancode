@@ -1,4 +1,3 @@
-gf
-gf-car
-gf-christmas
-gf-pixel
+version https://git-lfs.github.com/spec/v1
+oid sha256:22f542a49d6ca69a38e46eebbb450e9744b843587e65365e8aee944dc62061f7
+size 31

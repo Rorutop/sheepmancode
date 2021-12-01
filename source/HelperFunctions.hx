@@ -1,15 +1,3 @@
-import flixel.math.FlxMath;
-
-class HelperFunctions
-{
-    public static function truncateFloat( number : Float, precision : Int): Float {
-		var num = number;
-		num = num * Math.pow(10, precision);
-		num = Math.round( num ) / Math.pow(10, precision);
-		return num;
-	}
-
-	public static function GCD(a, b) {
-		return b == 0 ? FlxMath.absInt(a) : GCD(b, a % b);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:61ce832a9c53604465f1931190190a51888948d69a4a5596d810d961929939d7
+size 360

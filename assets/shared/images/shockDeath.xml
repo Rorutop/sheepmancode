@@ -1,35 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="shockDeath.png">
-	<!-- Created with Adobe Animate version 20.5.1.31044 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="shockfade0000" x="0" y="0" width="1118" height="515" frameX="0" frameY="-90" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0001" x="1118" y="0" width="784" height="573" frameX="-152" frameY="-61" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0002" x="1902" y="0" width="724" height="599" frameX="-182" frameY="-48" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0003" x="1902" y="0" width="724" height="599" frameX="-182" frameY="-48" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0004" x="2626" y="0" width="694" height="667" frameX="-209" frameY="-14" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0005" x="3320" y="0" width="683" height="679" frameX="-214" frameY="-8" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0006" x="4003" y="0" width="678" height="683" frameX="-206" frameY="-6" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0007" x="4681" y="0" width="675" height="687" frameX="-207" frameY="-4" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0008" x="5356" y="0" width="673" height="689" frameX="-219" frameY="-3" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0009" x="6029" y="0" width="671" height="691" frameX="-220" frameY="-2" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0010" x="6700" y="0" width="670" height="693" frameX="-210" frameY="-1" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0011" x="7370" y="0" width="669" height="693" frameX="-210" frameY="-1" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0012" x="0" y="693" width="668" height="693" frameX="-221" frameY="-1" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0013" x="668" y="693" width="668" height="695" frameX="-221" frameY="0" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0014" x="1336" y="693" width="667" height="695" frameX="-222" frameY="0" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0015" x="2003" y="693" width="669" height="693" frameX="-210" frameY="-1" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0016" x="2672" y="693" width="671" height="691" frameX="-209" frameY="-2" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0017" x="3343" y="693" width="673" height="689" frameX="-219" frameY="-3" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0018" x="4016" y="693" width="675" height="687" frameX="-218" frameY="-4" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0019" x="4691" y="693" width="676" height="685" frameX="-207" frameY="-5" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0020" x="5367" y="693" width="678" height="683" frameX="-206" frameY="-6" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0021" x="6045" y="693" width="680" height="681" frameX="-215" frameY="-7" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0022" x="6725" y="693" width="681" height="680" frameX="-215" frameY="-8" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0023" x="7406" y="693" width="683" height="678" frameX="-203" frameY="-9" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0024" x="0" y="1388" width="685" height="676" frameX="-202" frameY="-10" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0025" x="685" y="1388" width="687" height="674" frameX="-212" frameY="-11" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0026" x="1372" y="1388" width="689" height="673" frameX="-211" frameY="-11" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0027" x="2061" y="1388" width="691" height="671" frameX="-199" frameY="-12" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0028" x="2752" y="1388" width="693" height="669" frameX="-198" frameY="-13" frameWidth="1118" frameHeight="695"/>
-	<SubTexture name="shockfade0029" x="3445" y="1388" width="694" height="667" frameX="-198" frameY="-14" frameWidth="1118" frameHeight="695"/>
-</TextureAtlas>
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5312aa14bbb1bf4c110235ec7b0e982ef783fb6e23c41bd6a87352771c53c38
+size 4389

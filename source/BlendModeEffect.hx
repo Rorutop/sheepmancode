@@ -1,34 +1,3 @@
-package;
-
-import flixel.util.FlxColor;
-import openfl.display.ShaderParameter;
-
-typedef BlendModeShader =
-{
-	var uBlendColor:ShaderParameter<Float>;
-}
-
-class BlendModeEffect
-{
-	public var shader(default, null):BlendModeShader;
-
-	@:isVar
-	public var color(default, set):FlxColor;
-
-	public function new(shader:BlendModeShader, color:FlxColor):Void
-	{
-		shader.uBlendColor.value = [];
-		this.shader = shader;
-		this.color = color;
-	}
-
-	function set_color(color:FlxColor):FlxColor
-	{
-		shader.uBlendColor.value[0] = color.redFloat;
-		shader.uBlendColor.value[1] = color.greenFloat;
-		shader.uBlendColor.value[2] = color.blueFloat;
-		shader.uBlendColor.value[3] = color.alphaFloat;
-
-		return this.color = color;
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6bc6596ac6d0d4c3dc9874130ec60c103119c182c39676a5c03205531ad6ac6
+size 711

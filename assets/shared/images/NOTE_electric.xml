@@ -1,7 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
-<TextureAtlas imagePath="NOTE_electric.png">
-<SubTexture name="NOTE_electric electricLEFT0000" x="0" y="0" width="160" height="160" frameX="0" frameY="0" frameWidth="160" frameHeight="160" />
-<SubTexture name="NOTE_electric electricDOWN0000" x="160" y="0" width="162" height="158" frameX="0" frameY="0" frameWidth="162" frameHeight="158" />
-<SubTexture name="NOTE_electric electricUP0000" x="322" y="0" width="162" height="158" frameX="0" frameY="0" frameWidth="162" frameHeight="158" />
-<SubTexture name="NOTE_electric electricRIGHT0000" x="484" y="0" width="161" height="162" frameX="0" frameY="0" frameWidth="161" frameHeight="162" />
-</TextureAtlas>
+version https://git-lfs.github.com/spec/v1
+oid sha256:27efde0144e25feaafffc14870e62c36d172b6b3b99e3c2dff96eae8bace11f2
+size 700

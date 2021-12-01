@@ -1,18 +1,3 @@
-:sheepblack:A long time ago since the Sheep year,
-:sheepblack:There was an original Demon Lord and he was called the "Sheep King".
-:sheepblack:He is a Demon Lord who is planning to rul-
-:boyfriend:shut the fuck up with your stupid ass story!
-:sheepeh:..........
-:boyfriend:You almost broke the tower!
-:boyfriend:Anyways.. Who the beep are you?
-:sheepeh:Well uhh..
-:sheep:My name is dark sheep!
-:sheepeh: yeah that's the name..
-:sheep:There was a portal that suck me up so i dont know why i came here..
-:gf:Soo do you know about rapping?
-:sheep:No? What is that
-:boyfriend:basically singing but with beep bops and bars
-:sheep:Singing? Sounds fun!
-:sheep: i would try it
-:boyfriend: Alright! Let's funk!
-:boyfriend:(why does it feel like it's gonna rain here?)
+version https://git-lfs.github.com/spec/v1
+oid sha256:004e92d4d7411455c89e5cecc6cff75c8a8f6df561fd7e5ff7d4945ae0bbbf29
+size 775

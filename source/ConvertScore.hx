@@ -1,21 +1,3 @@
-class ConvertScore
-{
-    public static function convertScore(noteDiff:Float):Int
-    {
-        var daRating:String = Ratings.CalculateRating(noteDiff, 166);
-
-        switch(daRating)
-			{
-				case 'shit':
-					return -300;
-				case 'bad':
-					return 0;
-				case 'good':
-					return 200;
-				case 'sick':
-					return 350;
-            }
-        return 0;
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:111dbcf24891beb6b4ae737c0487bb23671c9efd4725b76353c901f5cb35e1f0
+size 362

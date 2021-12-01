@@ -1,15 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="sheepblackportrait.png">
-	<!-- Created with Adobe Animate version 20.5.1.31044 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="niggasheep0000" x="0" y="0" width="483" height="350"/>
-	<SubTexture name="niggasheep0001" x="0" y="0" width="483" height="350"/>
-	<SubTexture name="niggasheep0002" x="0" y="0" width="483" height="350"/>
-	<SubTexture name="niggasheep0003" x="0" y="0" width="483" height="350"/>
-	<SubTexture name="niggasheep0004" x="0" y="0" width="483" height="350"/>
-	<SubTexture name="niggasheep0005" x="0" y="0" width="483" height="350"/>
-	<SubTexture name="niggasheep0006" x="0" y="0" width="483" height="350"/>
-	<SubTexture name="niggasheep0007" x="0" y="0" width="483" height="350"/>
-	<SubTexture name="niggasheep0008" x="0" y="0" width="483" height="350"/>
-	<SubTexture name="niggasheep0009" x="0" y="0" width="483" height="350"/>
-</TextureAtlas>
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c14f5760682add9db8b1db4881c4b68fbb9c60b6e636b4134dd61f0c1ce4894
+size 959

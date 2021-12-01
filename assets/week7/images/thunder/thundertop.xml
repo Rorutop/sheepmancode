@@ -1,31 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="thundertop.png">
-	<!-- Created with Adobe Animate version 20.5.1.31044 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="thunderTop0000" x="0" y="0" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0001" x="0" y="0" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0002" x="0" y="0" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0003" x="0" y="0" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0004" x="0" y="0" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0005" x="0" y="0" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0006" x="3500" y="0" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0007" x="3500" y="0" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0008" x="3500" y="0" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0009" x="3500" y="0" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0010" x="0" y="2000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0011" x="0" y="2000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0012" x="0" y="2000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0013" x="0" y="2000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0014" x="3500" y="2000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0015" x="3500" y="2000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0016" x="3500" y="2000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0017" x="3500" y="2000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0018" x="0" y="4000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0019" x="0" y="4000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0020" x="0" y="4000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0021" x="0" y="4000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0022" x="3500" y="4000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0023" x="3500" y="4000" width="3500" height="2000"/>
-	<SubTexture name="thunderTop0024" x="0" y="6000" width="3500" height="2000"/>
-	<SubTexture name="idle0000" x="7000" y="7000" width="100" height="100"/>
-</TextureAtlas>
+version https://git-lfs.github.com/spec/v1
+oid sha256:f18afff71dd94ad0878e9795199d9a3dc6f71fc2f5bac9b186a0dfc873fe35c3
+size 2260
